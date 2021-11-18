@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>NPR News Headlines</title>
+<style>
+h1 {
+background-color: black;
+color: white;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-weight: 500;
+font-size: 1.6em;
+}
+
+body {
+background-color: black;
+color: white;
+white-space: pre-wrap;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+padding-left: 5%;
+padding-right: 5%;
+font-weight: 500;
+font-size: 1.6em;
+}
+</style>
+	</head><body><div id="top"></div><script>
+async function news() {
+	let zx = await fetch('http://3.23.49.40');
+	let story = await zx.json();
+	let zzzz = [story[0],story[1],story[2],story[3],story[4],story[5],story[6],story[7],story[8],story[9],story[10],story[11],story[12],story[13],story[14],story[15],story[16],story[17],story[18]];
+	let who = '';
+	for (let whos of zzzz) {
+		who += whos + '.\n\n';
+	}
+	for (let x of who) {
+		let zzza = document.createElement('div');
+		let zzzb = document.createTextNode(x);
+		let zzzc = zzza.appendChild(zzzb);
+		document.body.appendChild(zzzc);
+	}
+	let aac = "<h1>NPR News</h1>";
+        document.getElementById("top").innerHTML = aac;
+	}
+news();
+</script>
+</body>
+</html>
