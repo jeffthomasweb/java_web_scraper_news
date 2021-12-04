@@ -35,16 +35,10 @@ public class JavascrapeApplication {
   			results.add(linkText);
 			}
 	 
-		List<String> resultsf = new ArrayList<String>();
+		List<String> resultsFinal = new ArrayList<String>();
 		
-		for (String individualLinkText: results) {
-			resultsf.add(individualLinkText);
-		}
-
-    
-		List<String> partResultsf = new ArrayList<String>();
-		partResultsf = resultsf.subList(1,21);
+		resultsFinal = results.subList(1,21);
 	
-	return partResultsf;
+	return resultsFinal;
 }
 }
