@@ -1,4 +1,4 @@
-package com.example.javascrape;
+package com.javascrape.javascrape;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
